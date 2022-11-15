@@ -11,7 +11,7 @@ import {
   
   const AppRoutes = () => {
 
-    const isAuth = true
+    const isAuth = false
   
     useEffect(()=>{
       if(isAuth){
@@ -26,8 +26,7 @@ import {
         <Router>
           <Switch>
             {publicRoutes.map(({ element: Element, path, index }) => (
-              <Route path={path} key={index} element={<Element />} />
-              
+              <Route path={path} key={index} element={<Element />} />             
             ))}
   
             {!isAuth ? (
